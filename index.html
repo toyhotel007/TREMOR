@@ -39,6 +39,22 @@ a{color:inherit;text-decoration:none}
 .links{display:flex;flex-direction:column;gap:12px;margin:26px 0 8px}
 .btn{display:block;border:1px solid var(--cream);border-radius:999px;padding:17px 20px 15px;font-family:var(--head);text-transform:uppercase;letter-spacing:.3em;font-size:13px;color:var(--cream);transition:all .18s ease;position:relative;overflow:hidden}
 .btn:hover{background:var(--cream);color:var(--maroon)}
+.event{display:block;position:relative;overflow:hidden;margin:28px 0 4px;padding:24px 20px 22px;border:1px solid var(--pink);border-radius:26px;background:linear-gradient(135deg,rgba(240,141,159,.2),rgba(237,220,186,.06));color:var(--cream);text-decoration:none;animation:evglow 2.8s ease-in-out infinite}
+.event::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:45%;background:linear-gradient(100deg,transparent,rgba(249,248,232,.2),transparent);transform:skewX(-18deg);animation:evsweep 3.8s ease-in-out infinite;pointer-events:none}
+.event span{display:block}
+.ev-k{font-family:var(--head);text-transform:uppercase;letter-spacing:.26em;font-size:11px;color:var(--pink)}
+.ev-k::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--pink);margin-right:8px;vertical-align:middle;animation:pulse 1.8s ease-in-out infinite}
+.ev-t{font-family:var(--head);text-transform:uppercase;letter-spacing:.2em;font-size:21px;line-height:1.25;margin-top:12px}
+.ev-s{color:var(--pink);font-size:25px;line-height:1.1;margin-top:6px}
+.ev-m{font-family:var(--num);font-size:18px;letter-spacing:.06em;color:var(--sand);margin-top:12px}
+.ev-m small{font-family:var(--head);font-size:11px;letter-spacing:.18em;text-transform:uppercase}
+.event .ev-c{display:inline-block;margin-top:16px;padding:12px 22px 10px;border-radius:999px;background:var(--pink);color:var(--maroon);font-family:var(--head);text-transform:uppercase;letter-spacing:.26em;font-size:12px;transition:background .18s ease}
+.event:hover .ev-c{background:var(--cream)}
+@keyframes evglow{0%,100%{box-shadow:0 0 0 0 rgba(240,141,159,0)}50%{box-shadow:0 0 28px 2px rgba(240,141,159,.4)}}
+@keyframes evsweep{0%{left:-60%}55%,100%{left:125%}}
+@media (prefers-reduced-motion:reduce){.event,.event::after,.ev-k::before{animation:none}}
+.btn .ic{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:30px;height:30px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center;font-family:var(--num);font-style:italic;font-size:18px;line-height:1;letter-spacing:0;text-transform:none;color:var(--pink);transition:color .18s ease}
+.btn:hover .ic{color:var(--maroon)}
 .btn.pink{background:var(--pink);border-color:var(--pink);color:var(--maroon)}
 .btn.pink:hover{background:var(--cream);border-color:var(--cream)}
 .btn .s{display:block;font-family:var(--script);text-transform:none;letter-spacing:0;font-size:19px;line-height:1;margin-top:5px;opacity:.9}
@@ -118,10 +134,19 @@ a{color:inherit;text-decoration:none}
   </div>
   <p class="note"><span id="status" class="status"></span>Open every day. Reservations recommended.</p>
 
+  <a class="event" id="event" href="https://www.district.in/events/the-thanksgiving-table-a-handmade-pasta-feast-at-tremor-nov26-2026-buy-tickets?utm_source=External&amp;utm_medium=Influencer&amp;utm_campaign=the-thanksgiving-table-a-handmade-pasta-feast-at-tremor-nov26-2026_External_Influencer_261123&amp;af_force_deeplink=true&amp;is_retargeting=true&amp;c=the-thanksgiving-table-a-handmade-pasta-feast-at-tremor-nov26-2026_External_Influencer_261123&amp;source_caller=api_v2&amp;deep_link_value=edition%3A%2F%2Fresolve-onelink%3Flink_params%3D%257B%2522event_id%2522%253A%25226b01600b62ce3efbb59dc393%2522%252C%2522event_slug%2522%253A%2522the-thanksgiving-table-a-handmade-pasta-feast-at-tremor-nov26-2026%2522%257D%26link_type%3Dopen_event_details_page%26utm_source%3DExternal%26utm_medium%3DInfluencer%26utm_campaign%3Dthe-thanksgiving-table-a-handmade-pasta-feast-at-tremor-nov26-2026_External_Influencer_261123&amp;onelink_id=DSTRKT&amp;pid=External&amp;shortlink=dlsq1lfz&amp;af_xp=custom&amp;af_click_lookback=7d&amp;af_reengagement_window=7d" target="_blank" rel="noopener">
+    <span class="ev-k">One night only · Thu 26 Nov</span>
+    <span class="ev-t">The Thanksgiving Table</span>
+    <span class="ev-s sc-ed">a handmade pasta feast at Tremor</span>
+    <span class="ev-m">Entry from 7:30 <small>pm</small></span>
+    <span class="ev-c">Get tickets on District</span>
+  </a>
+  <script>if(Date.now()>new Date("2026-11-27T00:00:00+05:30").getTime()){document.getElementById("event").remove();}</script>
+
   <div class="links">
     <a class="btn pink" href="https://wa.me/917814851251?text=Hello%20Tremor%2C%20I%27d%20like%20to%20reserve%20a%20table.">Reserve a table<span class="s sc-ed">on whatsapp</span></a>
     <a class="btn" href="tel:+917814851251">Call to reserve<span class="s" style="font-family:var(--num);font-size:17px;letter-spacing:.08em">+91 7814851251</span></a>
-    <a class="btn" href="https://www.district.in/dining/chandigarh/tremor-sector-34/book">Book on District</a>
+    <a class="btn" href="https://www.district.in/dining/chandigarh/tremor-sector-34" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">D</span>Book on District<span class="s sc-ed">tables &amp; offers</span></a>
     <a class="btn" href="https://www.eazydiner.com/chandigarh-tricity/tremor-sector-34-chandigarh-719476">Book on EazyDiner</a>
     <a class="btn" href="#menus">The Menus<span class="s sc-mo">food, bar & cellar</span></a>
     <a class="btn" href="https://www.instagram.com/tremor.ind">Instagram<span class="s" style="font-family:var(--head);font-size:11px;letter-spacing:.28em;text-transform:uppercase">@tremor.ind</span></a>
