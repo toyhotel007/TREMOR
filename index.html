@@ -39,6 +39,8 @@ a{color:inherit;text-decoration:none}
 .links{display:flex;flex-direction:column;gap:12px;margin:26px 0 8px}
 .btn{display:block;border:1px solid var(--cream);border-radius:999px;padding:17px 20px 15px;font-family:var(--head);text-transform:uppercase;letter-spacing:.3em;font-size:13px;color:var(--cream);transition:all .18s ease;position:relative;overflow:hidden}
 .btn:hover{background:var(--cream);color:var(--maroon)}
+.btn .ic{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:30px;height:30px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center;font-family:var(--num);font-style:italic;font-size:18px;line-height:1;letter-spacing:0;text-transform:none;color:var(--pink);transition:color .18s ease}
+.btn:hover .ic{color:var(--maroon)}
 .btn.pink{background:var(--pink);border-color:var(--pink);color:var(--maroon)}
 .btn.pink:hover{background:var(--cream);border-color:var(--cream)}
 .btn .s{display:block;font-family:var(--script);text-transform:none;letter-spacing:0;font-size:19px;line-height:1;margin-top:5px;opacity:.9}
@@ -121,7 +123,7 @@ a{color:inherit;text-decoration:none}
   <div class="links">
     <a class="btn pink" href="https://wa.me/917814851251?text=Hello%20Tremor%2C%20I%27d%20like%20to%20reserve%20a%20table.">Reserve a table<span class="s sc-ed">on whatsapp</span></a>
     <a class="btn" href="tel:+917814851251">Call to reserve<span class="s" style="font-family:var(--num);font-size:17px;letter-spacing:.08em">+91 7814851251</span></a>
-    <a class="btn" href="https://www.district.in/dining/chandigarh/tremor-sector-34/book">Book on District</a>
+    <a class="btn" href="https://www.district.in/dining/chandigarh/tremor-sector-34" target="_blank" rel="noopener"><span class="ic" aria-hidden="true">D</span>Book on District<span class="s sc-ed">tables &amp; offers</span></a>
     <a class="btn" href="https://www.eazydiner.com/chandigarh-tricity/tremor-sector-34-chandigarh-719476">Book on EazyDiner</a>
     <a class="btn" href="#menus">The Menus<span class="s sc-mo">food, bar & cellar</span></a>
     <a class="btn" href="https://www.instagram.com/tremor.ind">Instagram<span class="s" style="font-family:var(--head);font-size:11px;letter-spacing:.28em;text-transform:uppercase">@tremor.ind</span></a>
